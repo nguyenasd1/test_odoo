@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_th_estate_property_tree" model="ir.ui.view">
+        <field name="name">th.estate.property.tree</field>
+        <field name="model">th.estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="name"/>
+                <field name="postcode"/>
+                <field name="bedroom"/>
+                <field name="living_area"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="date_availability"/>
+            </tree>
+        </field>
+    </record>
+        <record id="view_th_estate_property_form" model="ir.ui.view">
+        <field name="name">th.estate.property.form</field>
+        <field name="model">th.estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Testq">
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="selling_price"/>
+                        </group>
+                        <group>
+                            <field name="postcode"/>
+                        </group>
+                        <group>
+                            <field name="date_availability"/>
+                        </group>
+                        <group>
+                            <field name="expected_price"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                                <group>
+                                    <field name="bedroom"/>
+                                </group>
+                                <group>
+                                    <field name="living_area"/>
+                                </group>
+                                <group>
+                                    <field name="garden"/>
+                                </group>
+                                <group>
+                                    <field name="garden_orientation"/>
+                                </group>
+                                <group>
+                                    <field name="active"/>
+                                </group>
+                                <group>
+                                    <field name="state"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<record id="view_th_estate_property_search" model="ir.ui.view">
+        <field name="name">th.estate.property.search</field>
+        <field name="model">th.estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Tests">
+                <field name="name"/>
+                <field name="postcode"/>
+                <separator/>
+                <filter string="No Active" name="active" domain="[('active', '=', False)]"/>
+                <filter string="Selling Price more than 1000" name="selling_price" domain="[('selling_price', '>', 1000)]"/>
+                <filter string="Trạng thái(mới hoặc đã có ưu đãi)" name="state" domain="['|',('state', '=', 'new'),('state', '=', 'offer received')]"/>
+                <group expand="1" string="Group By">
+                        <filter string="Mã bưu điện" name="provider" context="{'group_by':'postcode'}"/>
+                    </group>
+            </search>
+        </field>
+    </record>
+
+
+
+<record id="estate_model_action" model="ir.actions.act_window">
+    <field name="name">Property</field>
+    <field name="res_model">th.estate.property</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+</odoo>
