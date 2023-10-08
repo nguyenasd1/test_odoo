@@ -26,3 +26,5 @@ class EstateProperty(models.Model):
         selection=[('new', 'New'), ('offer received', 'Offer Received'), ('offer accepted', 'Offer Accepted'),
                    ('sold', 'Sold'), ('canceled', 'Canceled')]
     )
+
+  adasdasddfdaksao;iflhs;ufasf
