@@ -8,11 +8,11 @@ class EstateProperty(models.Model):
     name = fields.Char()
     description = fields.Text(required=True)
     postcode = fields.Char()
-    date_availability = fields.Date('last seen',default= lambda self:fields.Date.today())
+    date_availability = fields.Date('last seen', default=lambda self: fields.Date.today())
     expected_price = fields.Float()
     selling_price = fields.Float()
     bedroom = fields.Integer(default=2)
-    living_area = fields.Integer()
+    living_area = fields.Integer(default=10)
     facades = fields.Integer()
     garage = fields.Boolean()
     garden = fields.Boolean()
@@ -23,5 +23,8 @@ class EstateProperty(models.Model):
     active = fields.Boolean(default=True)
     state = fields.Selection(
         default='new', required=True, readonly=False,
-        selection=[('new', 'New'), ('offer received', 'Offer Received'), ('offer accepted', 'Offer Accepted'), ('sold', 'Sold'), ('canceled', 'Canceled')]
+        selection=[('new', 'New'), ('offer received', 'Offer Received'), ('offer accepted', 'Offer Accepted'),
+                   ('sold', 'Sold'), ('canceled', 'Canceled')]
     )
+
+  adasdasddfdaksao;iflhs;ufasf
