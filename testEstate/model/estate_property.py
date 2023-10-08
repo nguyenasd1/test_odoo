@@ -12,7 +12,7 @@ class EstateProperty(models.Model):
     expected_price = fields.Float()
     selling_price = fields.Float()
     bedroom = fields.Integer(default=2)
-    living_area = fields.Integer()
+    living_area = fields.Integer(default=12312313)
     facades = fields.Integer()
     garage = fields.Boolean()
     garden = fields.Boolean()
@@ -25,3 +25,9 @@ class EstateProperty(models.Model):
         default='new', required=True, readonly=False,
         selection=[('new', 'New'), ('offer received', 'Offer Received'), ('offer accepted', 'Offer Accepted'), ('sold', 'Sold'), ('canceled', 'Canceled')]
     )
+
+
+
+
+
+asdasddasd
