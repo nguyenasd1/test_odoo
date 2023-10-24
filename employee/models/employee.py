@@ -12,5 +12,3 @@ class Employee(models.Model):
         else:
             raise AccessDenied("ko co Manager???")
 
-
-
