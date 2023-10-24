@@ -4,6 +4,7 @@
     <menuitem id="test_first_level_menu" name="Advertisement">
         <menuitem id="estate_model_menu_action" action="estate_model_action"/>
     </menuitem>
+<<<<<<< Updated upstream
 
 
 
@@ -14,6 +15,13 @@
 
 
     
+=======
+    <menuitem id="test_first_level_menu2" name="Settings">
+        <menuitem id="estate_type_model_menu_action" action="estate_type_model_action" sequence="1"/>
+
+        <menuitem id="estate_tag_model_menu_action" action="estate_tag_model_action" sequence="2"/>
+    </menuitem>
+>>>>>>> Stashed changes
 </menuitem>
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_th_estate_property_tag_tree" model="ir.ui.view">
+        <field name="name">th.estate.property.type.tree</field>
+        <field name="model">th.estate.property.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Views" editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_th_estate_property_tag_form" model="ir.ui.view">
+        <field name="name">th.estate.property.type.form</field>
+        <field name="model">th.estate.property.tag</field>
+        <field name="arch" type="xml">
+        <form string="add new">
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+<!--                    <group>-->
+<!--                            <field name="type_id"/>-->
+<!--                        </group>-->
+            </sheet>
+            </form>
+            </field>
+    </record>
+    <record id="estate_tag_model_action" model="ir.actions.act_window">
+    <field name="name">Property Tags</field>
+    <field name="res_model">th.estate.property.tag</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+      </odoo>

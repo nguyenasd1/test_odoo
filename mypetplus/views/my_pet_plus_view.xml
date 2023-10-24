@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+    <record id="inherited_model_my_pet_view_form" model="ir.ui.view">
+    <field name="name">inherited.model.form.th.my.pet</field>
+    <field name="model">th.my.pet</field>
+    <field name="inherit_id" ref="mypet.view_th_estate_property_tree"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='age']" position="after">
+            <field name="year"/>
+                </xpath>
+    </field>
+</record>
+    </data>
+</odoo>
