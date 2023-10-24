@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<menuitem id="pet_menu_root" name="My Pet">
+    <menuitem id="pet_first_level_menu" name="List My Pet">
+        <menuitem id="pet_model_menu_action" action="my_pet_model_action" />
+    </menuitem>
+</menuitem>
+</odoo>

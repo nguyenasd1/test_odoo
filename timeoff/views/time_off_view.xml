@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="inherited_model_time" model="ir.ui.view">
+            <field name="name">inherited.model.form.time</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="create_date"/>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="attributes">
+                    <attribute name="invisible">1</attribute> <!-- hide description field -->
+                </xpath>
+                <xpath expr="//page//field[@name='user_id']" position="after">
+                    <field name="employee_code"/>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="after">
+                    <field name="parent_id"/>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('coach_id', '=', False)]}</attribute>
+                </xpath>
+                <xpath expr="//header//button[@name='151']" position="after">
+                    <button name="action_check_manager"
+                            type="object"
+                            string="Manager?"
+                    />
+                </xpath>
+                <xpath expr="//header//button[@name='151']" position="attributes">
+                    />
+                </xpath>
+
+
+            </field>
+        </record>
+    </data>
+</odoo>

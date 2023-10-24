@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_th_estate_property_offers_tree" model="ir.ui.view">
+        <field name="name">th.estate.property.offer.tree</field>
+        <field name="model">th.estate.property.offer</field>
+        <field name="arch" type="xml">
+            <tree string="estatePr" editable="top"
+                  decoration-success="status == 'accept'"
+                  decoration-bf="status == 'accept'"
+                  decoration-danger="status == 'refused'">
+                <field name="price"/>
+                <field name="status" invisible="1"/>
+<!--                <field name="property_type_id"/>-->
+                <field name="id"/>
+                <field name="property_id"/>
+                <button name="action_confirm_state"  type="object" icon="fa-check" />
+                <button name="action_refuse_state"  type="object" icon="fa-times"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+        <record id="view_th_estate_property_offers_form" model="ir.ui.view">
+        <field name="name">th.estate.property.offer.form</field>
+        <field name="model">th.estate.property.offer</field>
+        <field name="arch" type="xml">
+        <form string="add new">
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="price"/>
+                        </h1>
+                    </div>
+                    <group>
+                            <field name="status"/>
+                            <field name="partner_id"/>
+                            <field name="date_deadline"/>
+                            <field name="validity"/>
+<!--                            <field name="property_type_id"/>-->
+
+                    </group>
+            </sheet>
+            </form>
+            </field>
+    </record>
+    <record id="estate_type_model_action" model="ir.actions.act_window">
+    <field name="name">Property Types</field>
+    <field name="res_model">th.estate.property.type</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+    </odoo>
