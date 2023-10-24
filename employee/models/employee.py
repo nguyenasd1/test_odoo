@@ -11,5 +11,6 @@ class Employee(models.Model):
             raise AccessDenied("ok Manager")
         else:
             raise AccessDenied("ko co Manager???")
+        # heheheeheheh1
 
 
