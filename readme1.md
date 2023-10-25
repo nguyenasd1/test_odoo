@@ -10,5 +10,5 @@ pop(1)
 list1.clear()
 sửa lisst1 thành dict
 list1= dict(list1)
-sửa list1 thafnh tuple
+sửa list1 thafnh tuple o test2
 list1=tuple(list1)
